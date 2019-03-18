@@ -1,0 +1,136 @@
+/* config this for the placeholder background */
+.loading-item, .loading-item .background-masker  {
+  background: #FFFFFF;
+}
+
+/* Create the animation */
+
+@keyframes placeHolderShimmer {
+  0%{
+      background-position: -420px 0
+  }
+  100%{
+      background-position: 420px 0
+  }
+}
+
+.loading-item {
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.loading-item .animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.8) 8%,
+      rgba(255, 255, 255, 0.4) 18%,
+      rgba(255, 255, 255, 0.8) 33%);
+    background-size: 800px 104px;
+    height: 96px;
+    position: relative;
+}
+
+.loading-item .background-masker {
+  position: absolute;
+}
+
+/* Every thing below this is just positioning */
+
+.loading-item .background-masker.header-top,
+.loading-item .background-masker.header-bottom,
+.loading-item .background-masker.subheader-bottom {
+    top: 0;
+    left: 40px;
+    right: 0;
+    height: 10px;
+}
+
+.loading-item .background-masker.header-left,
+.loading-item .background-masker.subheader-left,
+.loading-item .background-masker.header-right,
+.loading-item .background-masker.subheader-right {
+    top: 10px;
+    left: 40px;
+    height: 8px;
+    width: 10px;
+}
+
+.loading-item .background-masker.header-bottom {
+    top: 18px;
+    height: 6px;
+}
+
+.loading-item .background-masker.subheader-left,
+.loading-item .background-masker.subheader-right {
+    top: 24px;
+    height: 8px;
+}
+
+
+.loading-item .background-masker.header-right,
+.loading-item .background-masker.subheader-right {
+    width: auto;
+    left: 300px;
+    right: 0;
+}
+
+.loading-item .background-masker.subheader-right {
+    left: 230px;
+}
+
+.loading-item .background-masker.subheader-bottom {
+    top: 32px;
+    height: 8px;
+}
+
+.loading-item .background-masker.content-top,
+.loading-item .background-masker.content-second-line,
+.loading-item .background-masker.content-third-line,
+.loading-item .background-masker.content-second-end,
+.loading-item .background-masker.content-third-end,
+.loading-item .background-masker.content-first-end {
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 6px;
+}
+
+.loading-item .background-masker.content-top {
+    height:20px;
+}
+
+.loading-item .background-masker.content-first-end,
+.loading-item .background-masker.content-second-end,
+.loading-item .background-masker.content-third-end{
+    width: auto;
+    left: 380px;
+    right: 0;
+    top: 60px;
+    height: 8px;
+}
+
+.loading-item .background-masker.content-second-line  {
+    top: 68px;
+}
+
+.loading-item .background-masker.content-second-end {
+    left: 420px;
+    top: 74px;
+}
+
+.loading-item .background-masker.content-third-line {
+    top: 82px;
+}
+
+.loading-item .background-masker.content-third-end {
+    left: 300px;
+    top: 88px;
+}
+
+.loading-reload {
+  margin: 1em 0;
+}
