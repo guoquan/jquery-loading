@@ -69,7 +69,7 @@ Failed to load this content. Click to retry.
             }
           }
           if (options.unbind_reload_if_done) {
-            this.unbind("click", load);
+            this.off("click", load);
           }
         }).fail(function(jqXHR, textStatus, statusText) {
           console.error(this, jqXHR, textStatus, statusText);
